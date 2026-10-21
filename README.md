@@ -15,8 +15,8 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 |---|---|---|---|---|
 | 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy | |
 | 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max| |
-| 3 |13020240316 |Andi Tsabitha Hulwah | @AndiTsabithaHulwah| |
-| 4 |130202403|Annisa Meyti Friska| @AnnisaMeytiFriska | |
+| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska| |
+| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah| |
 
 ## Peta berkas dan penanggung jawab
 
