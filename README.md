@@ -13,10 +13,10 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
 |---|---|---|---|---|
-| 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy |BAB1,A1,B4,B2,Pustaka |
-| 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max|BAB 1,A2,A3,B1,Pustaka |
-| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska|BAB 1,A5,B3,Pustaka |
-| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah|BAB 1,A4,B5,BAB IV,Pustaka |
+| 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy |A1,B4,B2,Pustaka |
+| 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max|A2,A3,B1,Pustaka |
+| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska|A5,B3,Pustaka |
+| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah|A4,B5,BAB IV,Pustaka |
 
 ## Peta berkas dan penanggung jawab
 
@@ -24,7 +24,7 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 
 | Kode | Berkas | Penanggung jawab | Status |
 |---|---|---|---|
-| BAB I | laporan/BAB1-pendahuluan.md |Semua Anggota| Belum |
+| BAB I | laporan/BAB1-pendahuluan.md |Annisa Meyti Friska Manurung| Belum |
 | A1 | laporan/A1-konteks-arsitektur.md |Besse Armelya Cindy Damayanti M| Belum |
 | A2 | laporan/A2-stakeholder.md |Wahyuningsih S | Belum |
 | A3 | laporan/A3-batasan.md |Wahyuningsih S | Belum |
