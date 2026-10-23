@@ -13,10 +13,10 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
 |---|---|---|---|---|
-| 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy | |
-| 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max| |
-| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska| |
-| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah| |
+| 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy |BAB1,A1,B4,B2,Pustaka |
+| 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max|BAB 1,A2,A3,B1,Pustaka |
+| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska|BAB 1,A5,B3,Pustaka |
+| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah|BAB 1,A4,B5,BAB IV,Pustaka |
 
 ## Peta berkas dan penanggung jawab
 
