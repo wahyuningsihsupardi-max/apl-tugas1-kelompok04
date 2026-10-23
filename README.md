@@ -24,7 +24,7 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 
 | Kode | Berkas | Penanggung jawab | Status |
 |---|---|---|---|
-| BAB I | laporan/BAB1-pendahuluan.md | | Belum |
+| BAB I | laporan/BAB1-pendahuluan.md |Semua Anggota| Belum |
 | A1 | laporan/A1-konteks-arsitektur.md | | Belum |
 | A2 | laporan/A2-stakeholder.md | | Belum |
 | A3 | laporan/A3-batasan.md | | Belum |
@@ -35,8 +35,8 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 | B3 | laporan/B3-tiga-struktur.md dan diagram/ | | Belum |
 | B4 | laporan/B4-iso-25010.md | | Belum |
 | B5 | laporan/B5-trade-off.md | | Belum |
-| BAB IV | laporan/BAB4-penutup.md | | Belum |
-| Pustaka | laporan/daftar-pustaka.md | | Belum |
+| BAB IV | laporan/BAB4-penutup.md |Semua Anggota | Belum |
+| Pustaka | laporan/daftar-pustaka.md |Semua Anggota | Belum |
 
 ## Laporan PDF terakhir
 
