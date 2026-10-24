@@ -4,10 +4,10 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | Keterangan | Isi |
 |---|---|
-| Kelompok | Bagian [I / II / III] – Kelompok [XX] |
-| Subsistem | [salin dari tabel 2.2 pada dokumen tugas] |
-| Layanan inti | [salin dari tabel 2.2 pada dokumen tugas] |
-| Perwakilan kelompok | [nama, stambuk] |
+| Kelompok | Bagian  II  – Kelompok 04 |
+| Subsistem | Student Learning Platform |
+| Layanan inti | Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital |
+| Perwakilan kelompok |Wahyuningsih S,13020240265 |
 
 ## Anggota
 
