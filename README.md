@@ -5,8 +5,8 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 | Keterangan | Isi |
 |---|---|
 | Kelompok | Bagian II – Kelompok 04 |
-| Subsistem | II-4	Student Learning Platform	Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital|
-| Layanan inti |II-4	Student Learning Platform	Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital  |
+| Subsistem | Student Learning Platform|
+| Layanan inti |Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital  |
 | Perwakilan kelompok |  |
 
 ## Anggota
