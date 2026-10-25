@@ -4,19 +4,19 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 
 | Keterangan | Isi |
 |---|---|
-| Kelompok | Bagian  II  – Kelompok 04 |
-| Subsistem | Student Learning Platform |
-| Layanan inti | Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital |
-| Perwakilan kelompok |Wahyuningsih S,13020240265 |
+| Kelompok | Bagian [I / II / III] – Kelompok [XX] |
+| Subsistem | [salin dari tabel 2.2 pada dokumen tugas] |
+| Layanan inti | [salin dari tabel 2.2 pada dokumen tugas] |
+| Perwakilan kelompok | [nama, stambuk] |
 
 ## Anggota
 
 | No | Stambuk | Nama | Akun GitHub | Kode yang dikerjakan |
 |---|---|---|---|---|
-| 1 |13020240211 |Besse Armelya Cindy Damayanti M | @armelyacindy |A1,B4,B2,Pustaka |
-| 2 |13020240265|Wahyuningsih | @wahyuningsihsupardi-max|A2,A3,B1,Pustaka |
-| 3 |13020240294 |Annisa Meyti Friska Manurung |@AnnisaMeytiFriska|A5,B3,Pustaka |
-| 4 |13020240316|Andi Tsabitha Hulwah|@AndiTsabithaHulwah|A4,B5,BAB IV,Pustaka |
+| 1 | | | @ | |
+| 2 | | | @ | |
+| 3 | | | @ | |
+| 4 | | | @ | |
 
 ## Peta berkas dan penanggung jawab
 
@@ -24,19 +24,19 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 
 | Kode | Berkas | Penanggung jawab | Status |
 |---|---|---|---|
-| BAB I | laporan/BAB1-pendahuluan.md |Annisa Meyti Friska Manurung| Belum |
-| A1 | laporan/A1-konteks-arsitektur.md |Besse Armelya Cindy Damayanti M| Belum |
-| A2 | laporan/A2-stakeholder.md |Wahyuningsih S | Belum |
-| A3 | laporan/A3-batasan.md |Wahyuningsih S | Belum |
-| A4 | laporan/A4-asr.md |Andi Tsabitha Hulwah | Belum |
-| A5 | laporan/A5-keputusan-arsitektur.md dan adr/ |Annisa Meyti Friska Manurung | Belum |
-| B1 | laporan/B1-karakteristik.md |Wahyuningsih S | Belum |
-| B2 | laporan/B2-atribut-terukur.md |Besse Armelya Cindy Damayanti M| Belum |
-| B3 | laporan/B3-tiga-struktur.md dan diagram/ |Annisa Meyti Friska Manurung | Belum |
-| B4 | laporan/B4-iso-25010.md |Besse Armelya Cindy Damayanti M| Belum |
-| B5 | laporan/B5-trade-off.md |Andi Tsabitha Hulwah | Belum |
-| BAB IV | laporan/BAB4-penutup.md |Andi Tsabitha Hulwah | Belum |
-| Pustaka | laporan/daftar-pustaka.md |Semua Anggota | Belum |
+| BAB I | laporan/BAB1-pendahuluan.md | | Belum |
+| A1 | laporan/A1-konteks-arsitektur.md | | Belum |
+| A2 | laporan/A2-stakeholder.md | | Belum |
+| A3 | laporan/A3-batasan.md | | Belum |
+| A4 | laporan/A4-asr.md | | Belum |
+| A5 | laporan/A5-keputusan-arsitektur.md dan adr/ | | Belum |
+| B1 | laporan/B1-karakteristik.md | | Belum |
+| B2 | laporan/B2-atribut-terukur.md | | Belum |
+| B3 | laporan/B3-tiga-struktur.md dan diagram/ | | Belum |
+| B4 | laporan/B4-iso-25010.md | | Belum |
+| B5 | laporan/B5-trade-off.md | | Belum |
+| BAB IV | laporan/BAB4-penutup.md | | Belum |
+| Pustaka | laporan/daftar-pustaka.md | | Belum |
 
 ## Laporan PDF terakhir
 
