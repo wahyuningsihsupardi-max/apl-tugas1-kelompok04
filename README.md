@@ -7,7 +7,7 @@ Konteks & Keputusan Arsitektur (Pertemuan 5) serta Karakteristik Arsitektur & At
 | Kelompok | Bagian II – Kelompok 04 |
 | Subsistem | Student Learning Platform|
 | Layanan inti |Layanan perpustakaan: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital  |
-| Perwakilan kelompok |  |
+| Perwakilan kelompok |Andi Tsabitha Hulwah,13020240316  |
 
 ## Anggota
 
