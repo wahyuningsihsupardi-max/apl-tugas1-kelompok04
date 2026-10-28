@@ -25,7 +25,7 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 | Kode | Berkas | Penanggung jawab | Status |
 |---|---|---|---|
 | BAB I | laporan/BAB1-pendahuluan.md |Annisa Meyti Friska Manurung| Belum |
-| A1 | laporan/A1-konteks-arsitektur.md |Besse Armelya Cindy Damayanti M | Belum |
+| A1 | laporan/A1-konteks-arsitektur.md |Besse Armelya Cindy Damayanti M | Selesai |
 | A2 | laporan/A2-stakeholder.md |Wahyuningsih S  | Belum |
 | A3 | laporan/A3-batasan.md |Wahyuningsih S | Belum |
 | A4 | laporan/A4-asr.md |Andi Tsabitha Hulwah | Belum |
