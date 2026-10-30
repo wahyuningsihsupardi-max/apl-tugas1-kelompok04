@@ -2,7 +2,9 @@
 
 **Penanggung Jawab:** Wahyuningsih S 
 
-**Tabel Analisis Stakeholder:**
+Bagian ini menguraikan posisi setiap pemangku kepentingan dalam pengembangan Sistem Informasi Layanan Perpustakaan Terpadu UMI. Penempatan didasarkan pada dua pertanyaan: seberapa besar stakeholder dapat menentukan arah sistem (Power), dan seberapa besar layanan tersebut menyentuh pekerjaan atau kebutuhan sehari-hari mereka (Interest). 
+
+**1. Tabel Analisis Stakeholder:**
 
 | Stakeholder | Peran / Deskripsi | Power | Interest | Kategori | Strategi Pengelolaan |
 |:---|:---|:---:|:---:|:---|:---|
@@ -10,4 +12,9 @@
 | **Staf PUBA** | Melayani peminjaman buku fisik, pemberian stempel, dan perpanjangan lewat MyLibrary. | Rendah | Tinggi | *Show Consideration* | **Keep Informed** (dijadikan sumber validasi alur kerja dan diberi kabar perkembangan sistem). |
 | **Staf FIKOM** | Mengelola perpustakaan fakultas yang katalognya belum lengkap dan mengarahkan mahasiswa ke PUBA. | Rendah | Tinggi | *Show Consideration* | **Keep Informed** (dilibatkan dalam integrasi katalog fakultas dengan perpustakaan pusat). |
 | **Mahasiswa** | Mencari katalog, memeriksa ketersediaan dan lokasi buku, meminjam, serta mengembalikan buku. | Rendah | Rendah | *Show Consideration* | **Keep Informed** (disediakan pencarian online yang jelas dan pengingat tenggat, serta dilibatkan di uji coba). |
+
+**2. Matriks Power / Interest:** 
+•	High Power, High Interest (Manage Closely): Pengelola Perpustakaan UMI. 
+•	Low Power, High Interest (Keep Informed): Staf PUBA, Staf FIKOM, dan Mahasiswa.
+
 
