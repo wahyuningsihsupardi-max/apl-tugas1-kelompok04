@@ -1,6 +1,5 @@
 # A3. Batasan Sistem
-
-
+**Penanggung Jawab :** WAHYUNINGSIH S
 ## Batasan Sistem
 
 | Kategori | Batasan | Dampak pada Arsitektur |
