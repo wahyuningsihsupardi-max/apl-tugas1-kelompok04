@@ -37,9 +37,9 @@ Sifat karakteristik dibedakan menjadi:
 Catatan klasifikasi: Kategori di atas merupakan hasil analisis arsitektural terhadap kebutuhan perpustakaan, bukan istilah yang seluruhnya disebutkan oleh responden. Karakteristik nomor 7 dan 8 merupakan pertimbangan desain tambahan, bukan masalah yang secara langsung dilaporkan oleh narasumber.
 
 Sumber identifikasi:
-- Wawancara R1, staf PUBA UMI. HASIL WAWANCARA Apl.pdf
-- Wawancara R2, staf FIKOM UMI. Wawancara R2 FIKOM.pdf
-- Wawancara R3, R4, dan R5, mahasiswa PUBA UMI. Hasil Wawancara Mahasiswa R3,R4,R5.pdf
+* Wawancara R1, staf PUBA UMI. HASIL WAWANCARA Apl.pdf
+* Wawancara R2, staf FIKOM UMI. Wawancara R2 FIKOM.pdf
+* Wawancara R3, R4, dan R5, mahasiswa PUBA UMI. Hasil Wawancara Mahasiswa R3,R4,R5.pdf
 B1.2 Pemilihan Tiga Karakteristik Pendorong
 Berdasarkan delapan kandidat yang telah diidentifikasi, tiga karakteristik dipilih sebagai karakteristik pendorong (architecturally significant characteristics), yaitu Availability, Functional Correctness, dan Usability.
 
