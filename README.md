@@ -26,11 +26,11 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 |---|---|---|---|
 | BAB I | laporan/BAB1-pendahuluan.md |Annisa Meyti Friska Manurung| Belum |
 | A1 | laporan/A1-konteks-arsitektur.md |Besse Armelya Cindy Damayanti M | Selesai |
-| A2 | laporan/A2-stakeholder.md |Wahyuningsih S  | Belum |
-| A3 | laporan/A3-batasan.md |Wahyuningsih S | Belum |
+| A2 | laporan/A2-stakeholder.md |Wahyuningsih S  | Selesai |
+| A3 | laporan/A3-batasan.md |Wahyuningsih S | Selesai |
 | A4 | laporan/A4-asr.md |Andi Tsabitha Hulwah | Belum |
 | A5 | laporan/A5-keputusan-arsitektur.md dan adr/ |Annisa Meyti Friska Manurung | Belum |
-| B1 | laporan/B1-karakteristik.md |Wahyuningsih S | Belum |
+| B1 | laporan/B1-karakteristik.md |Wahyuningsih S | Selesai |
 | B2 | laporan/B2-atribut-terukur.md |Besse Armelya Cindy Damayanti M | Selesai |
 | B3 | laporan/B3-tiga-struktur.md dan diagram/ |Annisa Meyti Friska Manurung| Belum |
 | B4 | laporan/B4-iso-25010.md |Besse Armelya Cindy Damayanti M | Selesai |
