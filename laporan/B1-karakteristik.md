@@ -8,14 +8,14 @@ Studi Kasus: Student Learning Platform — Layanan Perpustakaan UMI
 Karakteristik arsitektur merupakan aspek kualitas atau kebutuhan teknis yang dapat memengaruhi keputusan dan rancangan arsitektur perangkat lunak. Identifikasi dilakukan berdasarkan kendala pelayanan, kebutuhan staf, dan pengalaman mahasiswa dalam menggunakan layanan perpustakaan.
 
 Dalam pengelompokan ini digunakan tiga kategori:
-* Operasional: karakteristik yang berkaitan dengan perilaku sistem ketika dijalankan.
-* Struktural: karakteristik yang berkaitan dengan susunan komponen, modul, dan kemudahan pengembangan atau pemeliharaan sistem.
-* Lintas sektor: karakteristik yang memengaruhi beberapa bagian sistem sekaligus dan tidak terbatas pada satu fungsi.
+* **Operasional:** karakteristik yang berkaitan dengan perilaku sistem ketika dijalankan.
+* **Struktural:** karakteristik yang berkaitan dengan susunan komponen, modul, dan kemudahan pengembangan atau pemeliharaan sistem.
+* **Lintas sektor:** karakteristik yang memengaruhi beberapa bagian sistem sekaligus dan tidak terbatas pada satu fungsi.
 Sifat karakteristik dibedakan menjadi:
-* Eksplisit: disebutkan secara langsung oleh responden atau terlihat jelas sebagai kebutuhan dalam hasil wawancara.
-* Implisit: tidak disebutkan secara langsung sebagai karakteristik kualitas, tetapi dapat disimpulkan dari kendala dan kebutuhan yang disampaikan responden.
+* **Eksplisit:** disebutkan secara langsung oleh responden atau terlihat jelas sebagai kebutuhan dalam hasil wawancara.
+* **Implisit:** tidak disebutkan secara langsung sebagai karakteristik kualitas, tetapi dapat disimpulkan dari kendala dan kebutuhan yang disampaikan responden.
 
-## B1. Identifikasi dan Klasifikasi Karakteristik Arsitektur
+# Tabel Identifikasi dan Klasifikasi
 
 | No. | Karakteristik | Kategori | Sifat | Alasan |
 |---|---|---|---|---|
