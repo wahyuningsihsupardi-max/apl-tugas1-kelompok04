@@ -1,8 +1,8 @@
 # A3. Batasan Sistem
 **Batasan Sistem**
 
-| Kategori | Batasan |  | Dampak pada Arsitektur |
-|:---|:---|:---:|:---|
+| Kategori | Batasan | Dampak pada Arsitektur |
+|:---|:---:---|
 | **Teknologi** | Server dan jaringan sering terganggu, sehingga layanan digital dan pencarian katalog terhambat. | Perlu rancangan yang tahan gangguan: cache untuk katalog, penanganan saat layanan tidak tersedia (graceful degradation), serta pemantauan ketersediaan. |
 | **Teknologi** | Sistem yang sudah ada (OPAC, MyLibrary, Moco PUBA UMI) harus tetap dipakai, dan informasi lokasi rak serta status peminjaman di pencarian belum lengkap. | Platform baru berperan sebagai lapisan integrasi, bukan pengganti total, dengan adapter ke sistem lama dan sinkronisasi status ketersediaan. |
 | **Teknologi** | Koleksi fisik dan digital tidak selalu sejalan, karena ada buku cetak yang tidak punya e-book. | Model data koleksi memisahkan format fisik dan digital, dan antarmuka menampilkan ketersediaan masing-masing. |
