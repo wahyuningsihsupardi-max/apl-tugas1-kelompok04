@@ -14,7 +14,7 @@ Bagian ini menguraikan posisi setiap pemangku kepentingan dalam pengembangan Sis
 | **Mahasiswa** | Mencari katalog, memeriksa ketersediaan dan lokasi buku, meminjam, serta mengembalikan buku. | Rendah | Rendah | *Show Consideration* | **Keep Informed** (disediakan pencarian online yang jelas dan pengingat tenggat, serta dilibatkan di uji coba). |
 
 **2. Matriks Power / Interest:** 
-•	High Power, High Interest (Manage Closely): Pengelola Perpustakaan UMI. 
-•	Low Power, High Interest (Keep Informed): Staf PUBA, Staf FIKOM, dan Mahasiswa.
+*	**High Power, High Interest (Manage Closely):** Pengelola Perpustakaan UMI. 
+*	**Low Power, High Interest (Keep Informed):** Staf PUBA, Staf FIKOM, dan Mahasiswa.
 
 
