@@ -31,9 +31,9 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 | A4 | laporan/A4-asr.md |Andi Tsabitha Hulwah | Belum |
 | A5 | laporan/A5-keputusan-arsitektur.md dan adr/ |Annisa Meyti Friska Manurung | Belum |
 | B1 | laporan/B1-karakteristik.md |Wahyuningsih S | Belum |
-| B2 | laporan/B2-atribut-terukur.md |Besse Armelya Cindy Damayanti M | Belum |
+| B2 | laporan/B2-atribut-terukur.md |Besse Armelya Cindy Damayanti M | Selesai |
 | B3 | laporan/B3-tiga-struktur.md dan diagram/ |Annisa Meyti Friska Manurung| Belum |
-| B4 | laporan/B4-iso-25010.md |Besse Armelya Cindy Damayanti M | Belum |
+| B4 | laporan/B4-iso-25010.md |Besse Armelya Cindy Damayanti M | Selesai |
 | B5 | laporan/B5-trade-off.md |Andi Tsabitha Hulwah | Belum |
 | BAB IV | laporan/BAB4-penutup.md |Andi Tsabitha Hulwah | Belum |
 | Pustaka | laporan/daftar-pustaka.md |Semua Anggota | Belum |
