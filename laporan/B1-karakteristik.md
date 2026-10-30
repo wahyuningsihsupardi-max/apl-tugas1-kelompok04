@@ -1,17 +1,10 @@
 # B1. Identifikasi dan Klasifikasi Karakteristik
 
 **Penanggung jawab:** Wahyuningsih S
-B1 — Identifikasi dan Klasifikasi Karakteristik Arsitektur
+
 Studi Kasus: Student Learning Platform — Layanan Perpustakaan UMI
 
-Berdasarkan hasil pemeriksaan awal terhadap instruksi dosen dan ketiga dokumen wawancara, pemilihan Availability, Functional Correctness, dan Usability sudah relevan untuk dijadikan tiga karakteristik pendorong.
-
-Ketiganya memiliki dasar masalah yang berbeda tetapi saling berkaitan:
-1. Availability: staf FIKOM (R2) memprioritaskan ketersediaan layanan. Staf PUBA (R1) juga menyampaikan adanya gangguan server dan jaringan.
-2. Functional Correctness: mahasiswa (R3 dan R4) menemukan bahwa informasi katalog belum selalu sesuai dengan kondisi ketersediaan buku sebenarnya. R3 juga menyebut informasi lokasi rak belum memadai.
-3. Usability: staf PUBA (R1) secara langsung memprioritaskan kemudahan penggunaan. R5 juga mengalami kebingungan ketika menggunakan katalog digital.
-Ada satu hal penting dalam penetapan prioritas: Functional Correctness merupakan istilah yang digunakan untuk merangkum kebutuhan ketepatan informasi koleksi berdasarkan wawancara. Istilah ini bukan kutipan langsung dari responden. Pemilihannya tetap dapat dipertanggungjawabkan karena ketepatan status dan lokasi koleksi berpengaruh langsung terhadap keberhasilan mahasiswa menemukan buku.
-B1.1 Identifikasi Kandidat Karakteristik Arsitektur
+**B1.1 Identifikasi Kandidat Karakteristik Arsitektur**
 Karakteristik arsitektur merupakan aspek kualitas atau kebutuhan teknis yang dapat memengaruhi keputusan dan rancangan arsitektur perangkat lunak. Identifikasi dilakukan berdasarkan kendala pelayanan, kebutuhan staf, dan pengalaman mahasiswa dalam menggunakan layanan perpustakaan.
 
 Dalam pengelompokan ini digunakan tiga kategori:
