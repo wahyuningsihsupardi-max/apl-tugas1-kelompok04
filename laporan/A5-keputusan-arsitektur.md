@@ -74,78 +74,103 @@ ADR adalah berkas teks pendek (sekitar 1–2 halaman) untuk satu keputusan. Prak
 
 Format yang digunakan: Title, Status (Proposed, Accepted, Superseded), Context, Decision, Consequences, Compliance, Notes. Seluruh ADR disimpan dalam satu direktori terpusat dan dikelompokkan (misalnya application, integration, enterprise), serta setiap anggota tim harus tahu ke mana mencarinya.
 
-### ADR-001: Pemisahan Modul Katalog dan Sirkulasi
+# ADR-001: Penerapan Database Indexing dan Caching Terpusat untuk Kinerja Pencarian Katalog
 
-| Field | Isi |
-|---|---|
-| Title | Pemisahan Modul Katalog dan Modul Sirkulasi |
-| Status | Accepted |
-| Context | Beban kerja kedua fungsi sangat berbeda. Pencarian katalog bersifat baca-berat dan melonjak tajam menjelang ujian, sedangkan peminjaman dan perpanjangan bersifat transaksional dengan volume jauh lebih kecil namun menuntut ketepatan pencatatan. Menyatukan keduanya dalam satu unit membuat lonjakan pencarian berisiko mengganggu transaksi sirkulasi. |
-| Decision | Memisahkan sistem menjadi modul Katalog, Sirkulasi, Koleksi Digital, Notifikasi, dan Autentikasi, dengan API Gateway sebagai pintu masuk tunggal. Modul Katalog dapat diskalakan terpisah dari modul Sirkulasi. |
-| Consequences | Perlu pengelolaan dua jalur skalabilitas dan pemantauan terpusat. Sebagai imbalannya, lonjakan pencarian pada musim ujian tidak lagi mengancam transaksi peminjaman, dan kegagalan modul Katalog tidak menghentikan layanan sirkulasi di meja perpustakaan. |
-| Compliance | Diperiksa melalui uji beban terpisah: beban pencarian dinaikkan hingga batas puncak sementara transaksi sirkulasi harus tetap berhasil. |
+- **Status:** Diterima (*Accepted*)
+- **Tanggal:** 31 Oktober 2026
+- **Pengambil keputusan:** Annisa Meyti Friska Manurung, Besse Armelya Cindy Damayanti M, Wahyuningsih S., Andi Tsabitha Hulwah (Kelompok II-04)
 
-### ADR-002: Mesin Pencari Khusus untuk Katalog
+## Context
+Mahasiswa sering melakukan pencarian buku secara bersamaan berdasarkan judul, penulis, atau ISBN pada jam sibuk perkuliahan[cite: 3]. Berdasarkan **ASR-1 (Skenario Performa)** dan target **B2**, sistem dituntut mampu menampilkan hasil pencarian katalog dengan waktu tanggap (*response time*) kurang dari 2 detik dalam kondisi beban normal[cite: 3]. Selain itu, terdapat batasan bahwa data buku dan transaksi harus dikelola secara terstruktur dan terintegrasi[cite: 3].
 
-| Field | Isi |
-|---|---|
-| Title | Penggunaan Mesin Pencari Khusus (Elasticsearch) untuk Katalog |
-| Status | Accepted |
-| Context | Katalog UMI diperkirakan mencapai ratusan ribu entri dan akan terus bertambah melalui impor metadata. Pencarian berbasis kueri basis data relasional dengan pola pencocokan teks tidak mampu memberikan hasil yang relevan maupun waktu respons di bawah 2 detik, terutama ketika pengguna mengetikkan kata kunci yang tidak persis sama dengan data katalog. |
-| Decision | Menggunakan Elasticsearch sebagai indeks pencarian katalog, dengan pengindeksan ulang otomatis setiap kali data bibliografi berubah, serta dukungan pencarian berdasarkan judul, pengarang, subjek, nomor panggil, dan kata kunci bebas. |
-| Consequences | Bertambah satu komponen infrastruktur yang harus dipantau dan dipelihara, serta kebutuhan menjaga konsistensi antara basis data utama dan indeks pencarian. Keuntungannya, pencarian menjadi cepat dan toleran terhadap kesalahan pengetikan, serta dapat menampilkan penyaringan hasil berdasarkan tahun, jenis koleksi, dan ketersediaan salinan. |
-| Compliance | Diperiksa melalui uji kinerja: hasil pencarian tampil di bawah 2 detik pada katalog berisi 100.000 judul dengan 100 pengguna bersamaan. |
+## Decision
+Kami akan menerapkan indeks pencarian (*database indexing*) pada kolom-kolom utama tabel buku (seperti judul, penulis, ISBN, dan kategori) serta mengimplementasikan lapisan *in-memory caching* terpusat (menggunakan Redis) untuk menyimpan kueri pencarian katalog yang sering diakses oleh mahasiswa.
 
-### ADR-003: Object Storage dan CDN untuk Koleksi Digital
+## Consequences
+- **Dampak Positif (Keuntungan):**
+  - Mempercepat waktu tanggap pencarian katalog hingga di bawah 2 detik sesuai target ASR-1[cite: 3].
+  - Mengurangi beban langsung (*read load*) pada basis data utama saat terjadi lonjakan trafik pencarian[cite: 3].
+- **Dampak Negatif & Trade-off:**
+  - Membutuhkan konsumsi memori (RAM) tambahan pada infrastruktur server *cache*.
+  - Menambah kompleksitas pemeliharaan sistem (*maintainability*) karena perlunya mekanisme *cache invalidation* agar data buku baru atau perubahan status peminjaman segera terbarui di lapisan *cache*[cite: 3].
 
-| Field | Isi |
-|---|---|
-| Title | Penyimpanan Koleksi Digital pada Object Storage dengan CDN |
-| Status | Accepted |
-| Context | Koleksi digital berupa berkas PDF dan gambar berukuran besar. Menyimpannya pada sistem berkas server aplikasi akan membebani server, menyulitkan pencadangan, dan membuat unduhan lambat bagi mahasiswa yang mengakses dari luar kampus dengan bandwidth terbatas. |
-| Decision | Menyimpan berkas koleksi digital pada object storage dan menyajikannya melalui CDN dengan tautan berbatas waktu (signed URL) yang hanya diberikan kepada pengguna berhak. Berkas tidak pernah disalin ke perangkat pengguna secara massal; pembacaan daring diutamakan. |
-| Consequences | Perlu pengelolaan kebijakan akses dan masa berlaku tautan, serta biaya penyimpanan dan lalu lintas CDN yang harus diperhitungkan dalam anggaran. Keuntungannya, server aplikasi tetap ringan, waktu unduh lebih singkat, dan kontrol akses terpusat sehingga kepatuhan terhadap lisensi lebih mudah dibuktikan. |
-| Compliance | Diperiksa dengan menguji bahwa tautan kedaluwarsa dan pengguna tanpa hak menerima penolakan akses. |
+## Compliance
+- Melakukan pengujian kinerja (*load testing*) menggunakan *tool* simulasi beban (seperti JMeter atau k6) untuk memastikan waktu respon pencarian tetap < 2 detik pada kondisi beban normal.
+- Pemantauan otomatis (*monitoring*) tingkat pemanfaatan *cache* (*cache hit ratio*) secara berkala.
 
-### ADR-004: Integrasi SSO UMI dan Data Keanggotaan dari SIAKAD
+---
 
-| Field | Isi |
-|---|---|
-| Title | Integrasi Single Sign-On UMI dan Sinkronisasi Keanggotaan dari SIAKAD |
-| Status | Accepted |
-| Context | Hak akses perpustakaan hanya berlaku bagi mahasiswa dan dosen yang berstatus aktif. Data status akademik sudah dikelola di SIAKAD, sedangkan autentikasi terpusat sudah tersedia melalui SSO UMI. Mengelola data keanggotaan secara manual di perpustakaan akan menimbulkan ketidaksesuaian data dan beban kerja tambahan bagi pustakawan. |
-| Decision | Mengintegrasikan autentikasi dengan SSO UMI melalui OAuth 2.0 / SAML, dan melakukan sinkronisasi berkala status keanggotaan dari SIAKAD. Peran (mahasiswa, dosen, pustakawan, admin) diambil dari data akademik dan digunakan untuk otorisasi. |
-| Consequences | Terdapat ketergantungan pada ketersediaan layanan autentikasi dan data akademik kampus: bila layanan tersebut terganggu, akses perpustakaan ikut terdampak. Untuk mengurangi risiko, data keanggotaan disimpan sebagai salinan lokal dengan masa berlaku terbatas sehingga akses koleksi digital tetap dapat dilayani saat sinkronisasi tertunda. |
-| Compliance | Diperiksa melalui uji peran dan uji penonaktifan: mahasiswa yang statusnya tidak aktif harus kehilangan hak akses setelah masa berlaku salinan lokal berakhir. |
+# ADR-002: Arsitektur Modul Transaksi Terpusat (ACID) untuk Manajemen Peminjaman
 
-### ADR-005: Message Queue untuk Notifikasi Jatuh Tempo dan Reservasi
+- **Status:** Diterima (*Accepted*)
+- **Tanggal:** 31 Oktober 2026
+- **Pengambil keputusan:** Annisa Meyti Friska Manurung, Besse Armelya Cindy Damayanti M, Wahyuningsih S., Andi Tsabitha Hulwah (Kelompok II-04)
 
-| Field | Isi |
-|---|---|
-| Title | Message Queue untuk Notifikasi Jatuh Tempo, Keterlambatan, dan Ketersediaan Reservasi |
-| Status | Accepted |
-| Context | Notifikasi dikirim secara berkala kepada banyak pengguna sekaligus dan bergantung pada layanan email pihak ketiga yang dapat lambat atau gagal. Bila pengiriman dilakukan secara sinkron di dalam alur peminjaman, transaksi di meja sirkulasi berisiko ikut melambat pada jam sibuk. |
-| Decision | Menggunakan message queue (RabbitMQ) agar modul Notifikasi mengonsumsi permintaan pengiriman secara asinkron dan dapat mencoba ulang ketika gagal. |
-| Consequences | Perlu clustering dan pemantauan antrean agar tersedia tinggi, serta mekanisme pencegahan pengiriman ganda ketika percobaan ulang terjadi. Pesan internal tidak melewati pemeriksaan keamanan pada lapisan API — risiko ini diterima sebagai trade-off oleh dewan peninjau arsitektur (ARB) karena pesan hanya beredar di jaringan internal. Keuntungan: transaksi sirkulasi tetap responsif dan notifikasi yang gagal dapat diulang otomatis. |
-| Compliance | Diperiksa melalui simulasi kegagalan layanan email: antrean harus tetap menampung pesan dan mengirimkannya setelah layanan pulih, tanpa menghasilkan notifikasi ganda. |
+## Context
+Berdasarkan hasil wawancara narasumber R3 dan R4, ditemukan kendala di mana data katalog di sistem belum selalu sesuai dengan ketersediaan fisik di rak (buku tercantum tersedia padahal sedang dipinjam)[cite: 3, 7, 8]. **ASR-3 (Skenario Keandalan)** dan target **B2 (Functional Correctness)** menuntut minimal 95% ketepatan data transaksi untuk mencegah transaksi peminjaman ganda (*double borrowing*) serta menjaga konsistensi status ketersediaan buku secara otomatis[cite: 3].
 
-### ADR-006: Standar Metadata dan Interoperabilitas Katalog
+## Decision
+Kami akan menerapkan komponen **Modul Transaksi Terpusat** yang memanfaatkan transaksi basis data terisolasi (memenuhi prinsip *Atomicity, Consistency, Isolation, Durability* / ACID) serta menerapkan mekanisme *pessimistic locking* saat proses peminjaman atau perpanjangan buku berlangsung.
 
-| Field | Isi |
-|---|---|
-| Title | Standar Metadata Dublin Core / MARC dan Pertukaran Data melalui OAI-PMH |
-| Status | Accepted |
-| Context | Katalog lama UMI tidak konsisten: sebagian entri lengkap, sebagian hanya memuat judul dan pengarang. Di sisi lain, kerja sama dengan konsorsium perpustakaan menuntut pertukaran data bibliografi yang terstandar agar koleksi dapat ditemukan lintas perpustakaan. |
-| Decision | Menetapkan Dublin Core sebagai format metadata internal minimum dan mempertahankan pemetaan ke MARC untuk data lama, serta menyediakan antarmuka OAI-PMH untuk memanen dan membagikan metadata dengan katalog eksternal. |
-| Consequences | Perlu tahap pembersihan dan pemetaan metadata katalog lama, yang menambah pekerjaan awal dan memerlukan keterlibatan pustakawan. Sebagai imbalannya, sistem dapat bertukar data dengan perpustakaan lain, memudahkan impor massal, dan menyiapkan jalan untuk pemanfaatan bersama koleksi antar institusi. |
-| Compliance | Diperiksa dengan menguji panen metadata melalui OAI-PMH dan memverifikasi bahwa hasil pemetaan dapat dibaca oleh sistem katalog eksternal. |
+## Consequences
+- **Dampak Positif (Keuntungan):**
+  - Menjamin integritas data (*Data Integrity*) dan ketepatan informasi (*Functional Correctness*) ketersediaan buku secara konsisten[cite: 3].
+  - Mencegah terjadinya peminjaman ganda pada satu eksemplar buku yang sama dalam waktu yang bersamaan[cite: 3].
+- **Dampak Negatif & Trade-off:**
+  - Mekanisme *locking* pada level basis data dapat sedikit menurunkan *throughput* transaksi pada saat beban puncak.
+  - Membutuhkan penanganan *timeout* transaksi yang ketat agar tidak menimbulkan kondisi *deadlock*.
 
-### 9.1 Siklus Hidup Status ADR
+## Compliance
+- Tinjauan kode (*code review*) wajib memeriksa pengaplikasian blok transaksi basis data pada setiap fungsi peminjaman dan perpanjangan buku.
+- Pengujian otomatis (*unit & integration testing*) khusus untuk skenario konkurensi (dua akun meminjam eksemplar buku yang sama secara simultan).
+- Audit berkala terhadap kesesuaian data katalog versus catatan fisik transaksi (menguji sampel 100 buku sesuai kriteria B2)[cite: 3].
 
-| Status | Arti | Kapan Digunakan |
-|---|---|---|
-| Proposed | Diusulkan, belum disetujui | Saat keputusan diajukan untuk ditinjau |
-| Accepted | Disetujui dan berlaku | Setelah disepakati tim dan dewan peninjau arsitektur |
-| Superseded | Digantikan oleh ADR lain | Ketika muncul keputusan baru yang menggantikan keputusan lama |
+---
 
-ADR yang telah digantikan tidak dihapus, melainkan diberi status Superseded agar jejak alasan keputusan lama tetap dapat ditelusuri. Praktik ini secara langsung mengatasi anti-pattern Groundhog Day dan Email-Driven Architecture.
+# ADR-003: Penerapan Layanan Notifikasi Terpusat (Asynchronous Message Queue) untuk Status Peminjaman
+
+- **Status:** Diterima (*Accepted*)
+- **Tanggal:** 31 Oktober 2026
+- **Pengambil keputusan:** Annisa Meyti Friska Manurung, Besse Armelya Cindy Damayanti M, Wahyuningsih S., Andi Tsabitha Hulwah (Kelompok II-04)
+
+## Context
+Mahasiswa (R4) membutuhkan fitur pengingat batas waktu pengembalian buku untuk menghindari denda keterlambatan[cite: 8]. **ASR-4 (Skenario Penelusuran dan Keandalan)** mengharuskan notifikasi konfirmasi peminjaman, perpanjangan, dan tenggat waktu terkirim secara otomatis kepada mahasiswa dalam waktu kurang dari 5 detik setelah pemicu/perubahan status transaksi berhasil diproses[cite: 3].
+
+## Decision
+Kami akan menggunakan arsitektur pemrosesan latar belakang berbasis antrean pesan (*asynchronous message queue* menggunakan RabbitMQ/Redis Queue) untuk mengelola **Layanan Notifikasi Terpusat** yang mengirimkan pemberitahuan via notifikasi aplikasi maupun email.
+
+## Consequences
+- **Dampak Positif (Keuntungan):**
+  - Eksekusi transaksi peminjaman utama tidak terhambat (*non-blocking*) oleh proses pengiriman email/notifikasi yang lambat.
+  - Target penyampaian notifikasi < 5 detik setelah perubahan status transaksi dapat dicapai secara konsisten[cite: 3].
+- **Dampak Negatif & Trade-off:**
+  - Menambah komponen infrastruktur berupa *message broker* yang perlu dikelola dan dipantau oleh tim IT[cite: 3].
+
+## Compliance
+- Melakukan pemantauan waktu antrean (*queue latency monitoring*) dan *log* kegagalan pengiriman notifikasi.
+- Pengujian otomatis (*automated testing*) untuk memastikan perubahan status peminjaman memicu *worker* pengirim notifikasi dengan tepat.
+
+---
+
+# ADR-004: Perancangan Antarmuka Berbasis Dashboard Terpusat Berprinsip Progressive Disclosure untuk Usability
+
+- **Status:** Diterima (*Accepted*)
+- **Tanggal:** 31 Oktober 2026
+- **Pengambil keputusan:** Annisa Meyti Friska Manurung, Besse Armelya Cindy Damayanti M, Wahyuningsih S., Andi Tsabitha Hulwah (Kelompok II-04)
+
+## Context
+Pengguna (R5) kerap merasa bingung dengan tampilan katalog digital jika terlalu banyak informasi yang disajikan sekaligus di satu layar[cite: 9]. Di sisi lain, **ASR-2 (Skenario Kebergunaan)** dan target **B2 (Usability)** menetapkan bahwa minimal 90% mahasiswa harus dapat menemukan informasi buku (judul, status, dan lokasi rak) dalam waktu kurang dari 2 menit (atau maksimal 3 kali klik) tanpa bantuan petugas[cite: 3].
+
+## Decision
+Kami akan merancang antarmuka pengguna (UI) berbasis **Dashboard Terpusat** dengan menerapkan pola desain *Progressive Disclosure*, yaitu menampilkan informasi utama (judul, penulis, status ketersediaan ringkas) terlebih dahulu di halaman pencarian utama, dan menempatkan detail lengkap (lokasi rak rinci, deskripsi buku) pada tampilan sekunder/pop-up.
+
+## Consequences
+- **Dampak Positif (Keuntungan):**
+  - Menyederhanakan alur pencarian, meningkatkan *learnability* dan *operability* sesuai standar ISO/IEC 25010[cite: 3].
+  - Membantu mahasiswa menemukan lokasi dan ketersediaan buku dalam batas waktu < 2 menit dan < 3 kali klik[cite: 3].
+- **Dampak Negatif & Trade-off:**
+  - Trade-off Usability vs Functional Correctness: Penyederhanaan tampilan mewajibkan pengguna melakukan klik ekstra untuk melihat detail spesifik posisi rak buku[cite: 3].
+
+## Compliance
+- Pelaksanaan pengujian kebergunaan berbasis tugas (*task-based usability testing*) terhadap 10 sampel mahasiswa sesuai skenario uji pada dokumen B2[cite: 3].
+- Evaluasi desain antarmuka melalui tinjauan prototipe UI/UX sebelum tahap implementasi frontend[cite: 3].
