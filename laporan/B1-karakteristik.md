@@ -27,14 +27,6 @@ Sifat karakteristik dibedakan menjadi:
 | 8 | Data Integrity (Integritas Data) | Lintas sektor | Implisit | Perbedaan informasi antara katalog digital dan ketersediaan buku sebenarnya menunjukkan perlunya konsistensi dan keakuratan data. |
 Catatan klasifikasi: Kategori di atas merupakan hasil analisis arsitektural terhadap kebutuhan perpustakaan, bukan istilah yang seluruhnya disebutkan oleh responden. Karakteristik nomor 7 dan 8 merupakan pertimbangan desain tambahan, bukan masalah yang secara langsung dilaporkan oleh narasumber.
 
-Sumber identifikasi:
-* Wawancara R1, staf PUBA UMI. Hasil Wawancara R1 Apl.pdf
-* Wawancara R2, staf FIKOM UMI. Wawancara R2 FIKOM.pdf
-* Wawancara R3, R4, dan R5, mahasiswa PUBA UMI. Hasil Wawancara Mahasiswa R3,R4,R5.pdf
-B1.2 Pemilihan Tiga Karakteristik Pendorong
-Berdasarkan delapan kandidat yang telah diidentifikasi, tiga karakteristik dipilih sebagai karakteristik pendorong (architecturally significant characteristics), yaitu Availability, Functional Correctness, dan Usability.
-
-Ketiganya dipilih karena mempunyai hubungan paling kuat dengan permasalahan nyata yang ditemukan dalam wawancara dan kebutuhan utama pengembangan layanan perpustakaan.
 
 ## Tiga Karakteristik Pendorong
 
