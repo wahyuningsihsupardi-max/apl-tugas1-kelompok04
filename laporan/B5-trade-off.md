@@ -1,7 +1,6 @@
 # B5. Analisis Trade-off
 
 **Penanggung Jawab:** Andi Tsabitha Hulwah
-# B5. Analisis Trade-off
 
 Pada pengembangan Student Learning Platform — Layanan Perpustakaan UMI, analisis trade-off dilakukan berdasarkan tiga karakteristik pendorong yang telah ditetapkan pada bagian B1, yaitu **Availability** (Ketersediaan Layanan), **Functional Correctness** (Ketepatan Fungsi dan Informasi), dan **Usability** (Kemudahan Penggunaan).
 
