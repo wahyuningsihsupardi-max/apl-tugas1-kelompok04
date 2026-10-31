@@ -36,7 +36,7 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 | B4 | laporan/B4-iso-25010.md |Besse Armelya Cindy Damayanti M | Selesai |
 | B5 | laporan/B5-trade-off.md |Andi Tsabitha Hulwah | Selesai |
 | BAB IV | laporan/BAB4-penutup.md |Andi Tsabitha Hulwah | Selesai |
-| Pustaka | laporan/daftar-pustaka.md |Semua Anggota | Selesai |
+| Pustaka | laporan/daftar-pustaka.md |Besse Armelya Cindy Damayanti M | Selesai |
 
 ## Laporan PDF terakhir
 
