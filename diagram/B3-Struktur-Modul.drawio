@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="sezNOG4XY4A5z04vz2n5">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="maEL0W3awNRvXDtza_n0-6" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-7" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-8" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Student Learning Platform" vertex="1">
+          <mxGeometry height="40" width="199" x="320" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" value="Modul Autentikasi" vertex="1">
+          <mxGeometry height="40" width="170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-17" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-18" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-20" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-21" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" value="Modul Perpustakaan" vertex="1">
+          <mxGeometry height="40" width="170" x="335" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-22" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-23" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-24" edge="1" parent="1" source="maEL0W3awNRvXDtza_n0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="maEL0W3awNRvXDtza_n0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" value="Modul Pengolahan" vertex="1">
+          <mxGeometry height="40" width="170" x="810" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Pencarian Katalog" vertex="1">
+          <mxGeometry height="40" width="120" x="150" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Peminjaman Buku" vertex="1">
+          <mxGeometry height="40" width="120" x="290" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Perpanjangan Buku" vertex="1">
+          <mxGeometry height="40" width="120" x="430" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Koleksi Digital" vertex="1">
+          <mxGeometry height="40" width="120" x="570" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Manajemen Data Buku" vertex="1">
+          <mxGeometry height="40" width="120" x="703" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Manajemen Anggota" vertex="1">
+          <mxGeometry height="40" width="120" x="835" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="maEL0W3awNRvXDtza_n0-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffcccc;strokeColor=#36393d;" value="Laporan Transaksi" vertex="1">
+          <mxGeometry height="40" width="120" x="970" y="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
