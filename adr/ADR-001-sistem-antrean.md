@@ -1,6 +1,6 @@
 # ADR-001: Penerapan Database Indexing dan In-Memory Caching untuk Pencarian Katalog
 
-* **Status:** Accepted
+* **Status:** Diterima
 * **Tanggal:** 31-10-2026
 * **Penulis:** Andi Tsabitha Hulwah
 
