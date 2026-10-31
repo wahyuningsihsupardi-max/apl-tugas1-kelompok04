@@ -1,6 +1,8 @@
-Penanggung Jawab : Annisa Meyti Friska Manurung
-
 # BAB I. Pendahuluan
+
+**Studi Kasus:** Student Learning Platform (Subsistem II-4) — Layanan Perpustakaan
+
+**Penanggung Jawab :** Annisa Meyti Friska Manurung
 
 ## 1.1 Gambaran layanan inti
 Layanan **Perpustakaan** merupakan salah satu sub-layanan dari **Student Learning Platform (II-4)**. Student Learning Platform adalah sebuah sistem informasi berbasis web yang digunakan oleh UMI untuk mendukung kegiatan belajar-mengajar, manajemen perpustakaan, dan interaksi akademik antar mahasiswa, dosen, dan staf perpustakaan. Layanan perpustakaan dalam tugas ini dibatasi pada empat fungsi inti, yaitu: **pencarian katalog**, **peminjaman**, **perpanjangan**, dan **akses koleksi digital**.
