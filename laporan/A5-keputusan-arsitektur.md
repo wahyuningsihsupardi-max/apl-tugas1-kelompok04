@@ -1,12 +1,13 @@
-Penanggung Jawab : Annisa Meyti Friska Manurung
 
 # A5. Keputusan Arsitektur dan ADR
-Student Learning Platform (Subsistem II-4) — Layanan Perpustakaan
+
+**Studi Kasus:** Student Learning Platform (Subsistem II-4) — Layanan Perpustakaan
+
+**Penanggung Jawab :** Annisa Meyti Friska Manurung
 
 Ruang lingkup: pencarian katalog, peminjaman, perpanjangan, dan akses koleksi digital.
 
 _Materi acuan: Pertemuan 5 — Konteks Arsitektur & Keputusan Arsitektur_
-
 
 ---
 
@@ -148,6 +149,3 @@ Format yang digunakan: Title, Status (Proposed, Accepted, Superseded), Context, 
 | Superseded | Digantikan oleh ADR lain | Ketika muncul keputusan baru yang menggantikan keputusan lama |
 
 ADR yang telah digantikan tidak dihapus, melainkan diberi status Superseded agar jejak alasan keputusan lama tetap dapat ditelusuri. Praktik ini secara langsung mengatasi anti-pattern Groundhog Day dan Email-Driven Architecture.
-
-
-
