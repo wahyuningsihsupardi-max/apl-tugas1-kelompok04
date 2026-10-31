@@ -50,4 +50,4 @@ Status: Belum / Draf / Selesai. Perbarui tabel ini setiap ada perubahan.
 4. Jalankan `git pull` sebelum mulai bekerja. Jangan `force push`. Jangan gabung commit (squash).
 5. Jangan unggah data pribadi orang lain (nama responden, nomor telepon, tangkapan layar berisi identitas).
 6. Isi `lampiran/C-pembagian-tugas.md` dengan tautan commit masing-masing.
-7. Batas: tautan ke Kalam 22 Okt 2026 pukul 23.00 WITA; perubahan terakhir 29 Okt 2026 pukul 23.00 WITA.
+7. Batas: tautan ke Kalam 25 Okt 2026 pukul 23.00 WITA; perubahan terakhir 31 Okt 2026 pukul 23.00 WITA.
