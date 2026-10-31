@@ -36,29 +36,9 @@ Catatan klasifikasi: Kategori di atas merupakan hasil analisis arsitektural terh
 | 2 | Functional Correctness (Ketepatan Fungsi) | Informasi katalog, status ketersediaan buku, dan lokasi rak harus sesuai dengan kondisi sebenarnya. | Membutuhkan pengelolaan data yang konsisten, validasi informasi, dan sinkronisasi data. |
 | 3 | Usability (Kemudahan Penggunaan) | Mahasiswa masih mengalami kesulitan ketika menggunakan katalog digital untuk mencari informasi buku. | Membutuhkan antarmuka yang sederhana, navigasi yang jelas, dan proses pencarian yang mudah dipahami. |
 
-Alasan Pemilihan Ketiga Karakteristik
-**1. Availability (Ketersediaan Layanan)**
-
-Availability dipilih karena layanan perpustakaan digital membutuhkan sistem yang dapat diakses ketika mahasiswa maupun petugas memerlukan informasi koleksi. Berdasarkan wawancara R1, gangguan server dan jaringan menjadi salah satu kendala pelayanan. R2 juga menegaskan bahwa ketersediaan layanan merupakan prioritas karena proses pelayanan dapat terhambat apabila sistem tidak dapat digunakan.
-
-Oleh karena itu, Availability menjadi karakteristik pendorong karena berpengaruh terhadap keberlangsungan layanan pencarian katalog, perpanjangan buku, dan akses koleksi digital.
-
-**2. Functional Correctness (Ketepatan Fungsi dan Informasi)**
-
-Functional Correctness dipilih karena informasi yang diberikan sistem harus sesuai dengan kondisi koleksi sebenarnya. Berdasarkan wawancara R3, terdapat pengalaman ketika buku tercantum dalam sistem pencarian, tetapi ternyata tidak tersedia saat hendak dipinjam. R3 dan R4 juga mengharapkan informasi ketersediaan buku yang lebih jelas, sedangkan R3 membutuhkan informasi lokasi rak yang lebih rinci.
-
-Oleh karena itu, ketepatan informasi menjadi karakteristik penting agar mahasiswa tidak mengalami kesulitan dalam menemukan koleksi. Sistem harus mampu menampilkan informasi judul, status ketersediaan, dan lokasi koleksi secara tepat.
-
-**3. Usability (Kemudahan Penggunaan)**
-
-Usability dipilih karena sistem perpustakaan harus mudah dipahami oleh mahasiswa maupun petugas. Berdasarkan wawancara R1, kemudahan penggunaan menjadi salah satu aspek yang diprioritaskan dalam layanan digital. Selain itu, R5 menyampaikan bahwa dirinya masih merasa bingung ketika menggunakan katalog digital.
-
-Dengan demikian, sistem perlu menyediakan tampilan yang sederhana, navigasi yang jelas, serta fitur pencarian yang mudah digunakan agar mahasiswa dapat menemukan buku dan mengakses layanan tanpa mengalami kesulitan.
-
-Ketiga karakteristik tersebut saling mendukung. Availability memastikan layanan dapat diakses, Functional Correctness memastikan informasi yang diberikan benar, sedangkan Usability memastikan layanan mudah digunakan.
-
 **B1.3 Pengujian Tiga Karakteristik Pendorong dengan Tiga Ciri Karakteristik Arsitektur**
-Sesuai ketentuan B1, ketiga karakteristik pendorong perlu diuji menggunakan tiga ciri untuk memastikan bahwa karakteristik tersebut memang signifikan terhadap arsitektur perangkat lunak.
+
+ketiga karakteristik pendorong perlu diuji menggunakan tiga ciri untuk memastikan bahwa karakteristik tersebut memang signifikan terhadap arsitektur perangkat lunak.
 
 Tiga pertanyaan pengujian yang digunakan adalah:
 **1. Bukan sekadar kebutuhan domain:** Apakah karakteristik tersebut merupakan pertimbangan kualitas atau desain sistem, bukan hanya fungsi bisnis yang harus disediakan?
@@ -72,9 +52,4 @@ Tiga pertanyaan pengujian yang digunakan adalah:
 | 1 | Availability | Ya, karena berkaitan dengan kualitas ketersediaan layanan. | Ya, memengaruhi rancangan server, jaringan, dan mekanisme pemulihan layanan. | Ya, karena sistem harus dapat diakses ketika dibutuhkan. | Memenuhi |
 | 2 | Functional Correctness | Ya, karena menekankan ketepatan hasil dan informasi sistem. | Ya, memengaruhi pengelolaan, validasi, dan konsistensi data. | Ya, karena informasi buku harus sesuai dengan kondisi sebenarnya. | Memenuhi |
 | 3 | Usability | Ya, karena berkaitan dengan kemudahan interaksi pengguna. | Ya, memengaruhi rancangan antarmuka dan alur interaksi sistem. | Ya, karena sistem harus mudah digunakan mahasiswa dan petugas. | Memenuhi |
-
-Hasil Pengujian
-Berdasarkan ketiga ciri tersebut, Availability, Functional Correctness, dan Usability memenuhi kriteria sebagai karakteristik pendorong arsitektur.
-
-Ketiga karakteristik tidak hanya berkaitan dengan kebutuhan pengguna, tetapi juga memengaruhi keputusan perancangan sistem. Availability memengaruhi rancangan infrastruktur dan penanganan gangguan, Functional Correctness memengaruhi pengelolaan serta validasi data, sedangkan Usability memengaruhi rancangan antarmuka dan interaksi pengguna.
 
