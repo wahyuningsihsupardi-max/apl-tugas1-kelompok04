@@ -24,7 +24,7 @@ Utilitas Layanan Perpustakaan UMI
 
 | Kriteria (SK-02) | Bobot (%) | Skor A (mis. 1–5) | Bobot × A | Skor B (1–5) | Bobot × B | Dasar penilaian |
 |---|---:|---:|---:|---:|---:|---|
-| Ketepatan informasi (SK-01) | [40 | 3 | 120 | 4 | 160 | langsung, tetapi bila pembaruan indeks gagal setelah transaksi tersimpan, status tidak sama. B: event tidak hilang (1 transaksi), jeda ≤ 5 dtk. |
+| Ketepatan informasi (SK-01) | 40 | 3 | 120 | 4 | 160 | langsung, tetapi bila pembaruan indeks gagal setelah transaksi tersimpan, status tidak sama. B: event tidak hilang (1 transaksi), jeda ≤ 5 dtk. |
 | Ketersediaan layanan | 25 | 2 | 50 | 5 | 125 | gangguan Catalog Service/Elasticsearch ikut menggagalkan peminjaman. B: peminjaman tetap jalan; event menunggu di RabbitMQ. |
 | Kemudahan pemeliharaan | 15 | 3 | 45 | 4 | 60 | pelanggan baru (notifikasi, katalog FIKOM) ditambah tanpa mengubah Circulation Service. |
 | Kompleksitas implementasi | 20 | 4 | 80 | 2 | 40 | tanpa jalur baru. B: RabbitMQ memikul jalur status, perlu Index Updater dan pemantauan. |
