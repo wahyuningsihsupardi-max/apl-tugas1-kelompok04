@@ -5,9 +5,6 @@
 
 **Kategori:** Struktur atau pembagian lapisan (modul).
 
-
-# BAB III TAKTIK DAN POLA
-
 ## 3.2 Pola Arsitektur (U4)
 
 Pola arsitektur adalah solusi teruji untuk masalah desain yang berulang dalam konteks tertentu [1], [5]. Student Learning Platform – Layanan Perpustakaan UMI menerapkan dua pola dari dua kategori berbeda: P-01 Layered dari kategori struktur atau pembagian modul, dan P-02 Publish–Subscribe dari kategori komunikasi berbasis event (komponen-dan-konektor) [1].
