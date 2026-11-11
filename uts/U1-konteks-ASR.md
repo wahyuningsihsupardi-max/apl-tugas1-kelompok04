@@ -1,6 +1,6 @@
 # U1. Konteks dan ASR
 
-**BAB I: PENDAHULUAN**  
+**BAB I: Pendahuluan**  
 
 **Penanggung Jawab:** Besse Armelya Cindy Damayanti M 
 
