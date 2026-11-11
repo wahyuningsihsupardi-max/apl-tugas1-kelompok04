@@ -1,49 +1,45 @@
 # U7. Architecture Decision Records (ADR)
 
 **BAB V: Evaluasi dan ADR (bagian ADR)**  
-**Penanggung jawab:** [isi sesuai pembagian MID]
+**Penanggung jawab:** Wahyuningsih S
 
 **Ketentuan dosen:** Minimal **2 ADR BARU**. Masing-masing ADR harus mempunyai **Title, Status, Context, Decision, dan Consequences**. Jangan hanya menyalin ADR dari Tugas Kelompok I.
 
 ## ADR-UTS-001
 
 ### Title
-[judul keputusan baru yang selaras dengan alternatif terpilih pada U6]
+Penerapan Pola Publish–Subscribe Menggunakan RabbitMQ
 
 ### Status
-[Proposed / Accepted / Superseded — pilih sesuai kesepakatan kelompok]
+Accepted (Diterima)
 
 ### Context
-[masalah dan alasan keputusan diperlukan; kaitkan U1 dan SK-02]
-
+Informasi status ketersediaan buku pada katalog terkadang tidak sesuai dengan kondisi koleksi sebenarnya. Hal ini dapat menyebabkan mahasiswa memperoleh informasi yang kurang akurat mengenai ketersediaan buku. Sistem membutuhkan mekanisme pembaruan status secara otomatis setelah transaksi peminjaman atau pengembalian dilakukan.
 ### Decision
-[keputusan arsitektur terpilih; sebut komponen/pola terkait U4 dan U5]
+Menggunakan pola arsitektur Publish–Subscribe dengan RabbitMQ sebagai perantara pengiriman event. Circulation Service akan mengirimkan event StatusBukuBerubah setelah transaksi berhasil disimpan ke PostgreSQL. Selanjutnya, Index Updater menerima event tersebut untuk memperbarui indeks katalog pada Elasticsearch. Notification Service juga dapat menerima event untuk kebutuhan notifikasi.
 
 ### Consequences
-**Dampak positif:** [isi].  
-**Dampak negatif / harga yang dibayar:** [isi].
+**Dampak positif:** Pembaruan status buku dapat dilakukan secara otomatis, mengurangi ketidaksesuaian informasi katalog, dan mengurangi ketergantungan langsung antarlayanan.  
+**Dampak negatif / harga yang dibayar:** Membutuhkan infrastruktur RabbitMQ tambahan, pemantauan antrean pesan, serta pengelolaan event yang lebih kompleks. Terdapat kemungkinan keterlambatan pembaruan status pada katalog.
 
 ---
 
 ## ADR-UTS-002
 
 ### Title
-[judul keputusan baru yang berbeda dengan ADR-UTS-001]
+Penerapan Health Check dan Pemulihan Layanan
 
 ### Status
-[Proposed / Accepted / Superseded — pilih sesuai kesepakatan kelompok]
+Accepted (Diterima)
 
 ### Context
-[masalah/kebutuhan yang memicu pilihan]
+Berdasarkan hasil wawancara dengan staf perpustakaan PUBA UMI, terdapat kendala pada server dan jaringan yang dapat menghambat akses layanan perpustakaan. Oleh karena itu, sistem membutuhkan mekanisme untuk mendeteksi gangguan layanan dan menjaga agar katalog serta layanan peminjaman tetap dapat digunakan.
 
 ### Decision
-[keputusan arsitektur yang dapat ditelusuri ke U3, U4, U5, dan U6]
+Menerapkan mekanisme Health Check melalui API Gateway dengan pemeriksaan kondisi layanan setiap 5 detik. Sistem menyediakan dua instans pada Catalog Service dan Circulation Service. Apabila salah satu instans mengalami gangguan, API Gateway akan mengalihkan permintaan ke instans lain yang masih berjalan. PostgreSQL juga dirancang menggunakan konfigurasi primer dan replika untuk mendukung ketersediaan data.
 
 ### Consequences
-**Dampak positif:** [isi].  
-**Dampak negatif / harga yang dibayar:** [isi].
+**Dampak positif:** Gangguan pada salah satu instans tidak langsung menghentikan seluruh layanan, sistem dapat mendeteksi masalah lebih cepat, dan ketersediaan layanan dapat ditingkatkan  
+**Dampak negatif / harga yang dibayar:** Membutuhkan server tambahan, meningkatkan biaya infrastruktur, serta memerlukan pemantauan dan pemeliharaan yang lebih kompleks.
 
-## Pemeriksaan konsistensi
-- [ ] Kedua ADR benar-benar baru untuk MID, bukan salinan ADR lama.
-- [ ] Kedua keputusan sejalan dengan U4, U5, dan pilihan akhir U6.
-- [ ] ADR dicantumkan juga di lampiran laporan gabungan sesuai instruksi dosen.
+
