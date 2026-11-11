@@ -1,6 +1,6 @@
-# BAB II
+# U2. Skenario atribut kualitas
 
-# SKENARIO ATRIBUT KUALITAS
+**BAB II: Skenario**  
 **Penanggung Jawab:** Besse Armelya Cindy Damayanti M  
 
 ## 2.1 Dasar Penyusunan Skenario
